@@ -1,1 +1,15 @@
-hi
+# DevOps Handbook
+
+This guide will help you understand our infrastructure stack and how we maintain our platforms. While this guide does not have exhaustive details for all operations, it could be used as a reference for your understanding of the systems.
+
+Let us know if you have feedback or queries and we will be happy to clarify.
+
+## Flight Manual - Code Deployments
+
+This repository is continuously built, tested, and deployed to **separate sets of infrastructure (Servers, Databases, CDNs, etc.)**.
+
+This involves three steps to be followed in sequence:
+
+1. New changes (both fixes and features) are merged into our primary development branch (`main`) via pull requests.
+2. These changes are run through a series of automated tests.
+3. Once the tests pass we release the changes (or update them if needed) to deployments on our infrastructure.
