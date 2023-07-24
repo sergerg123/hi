@@ -5,3 +5,14 @@
   <p align="center">
     <a href="https://roadmap.sh/roadmaps">
     	<img src="https://img.shields.io/badge/%E2%9C%A8-Roadmaps%20-0a0a0a.svg?style=flat&colorA=0a0a0a" alt="roadmaps" />
+
+/////////////////////////////////////////////////
+jobs:
+  build: # name of your job
+    machine: true # executor type
+    resource_class: brettwooldridge/ubuntu
+
+    steps:
+      # Commands run in a Linux virtual machine environment
+      - checkout
+      - run: mvn clean package
